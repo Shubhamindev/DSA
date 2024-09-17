@@ -1,1 +1,16 @@
+#include <vector>
 
+int largestElement(const std::vector<int> &array, int size) {
+    if (size <= 0) {
+        return -1;
+    }
+
+    int maxElement = array[0];
+    for (int i = 1; i < size; ++i) {
+        if (array[i] > maxElement) {
+            maxElement = array[i];
+        }
+    }
+
+    return maxElement;
+}
